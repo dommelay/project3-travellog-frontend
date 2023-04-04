@@ -9,9 +9,11 @@ function App() {
 const [trips, setTrips] = useState([])
 
   const getTrips = () => {
-    axios.get('https://localhost3000/logs').then((response) => {
+    axios.get('http://localhost:3000/logs').then((response) => {
       setTrips(response.data)
-    })
+    }).catch((error) => {
+      console.log(error)
+  })
   }
   useEffect(() => {
     getTrips();

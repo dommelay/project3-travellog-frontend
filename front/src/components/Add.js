@@ -12,9 +12,12 @@ const Add = (props) => {
         setAdd(!add)
     }
     const handleSubmit = (event) => {
+        setTrip(trip)
         event.preventDefault();
-        axios.post('https://localhost3000/logs', trip).then(() => {
+        axios.post('http://localhost:3000/logs', trip).then(() => {
             props.getTrips();
+        }).catch((error) => {
+            console.log(error)
         })
         addDisplay();
     }

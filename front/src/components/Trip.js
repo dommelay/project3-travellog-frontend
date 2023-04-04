@@ -15,7 +15,7 @@ const Trip = (props) => {
    const handleSubmit = (event) => {
        event.preventDefault();
        editDisplay();
-       axios.put(`https://localhost3000/logs/${props.trip._id}`, newTrip).then(() => {
+       axios.put(`http://localhost:3000/logs/${props.trip._id}`, newTrip).then(() => {
            props.getTrips();
        })
        handleCollapse();
@@ -23,7 +23,7 @@ const Trip = (props) => {
 
    const handleDelete = (event) => {
        event.preventDefault();
-       axios.delete(`https://localhost3000/logs/${props.trip._id}`).then(() => {
+       axios.delete(`http://localhost:3000/logs/${props.trip._id}`).then(() => {
            props.getTrips()
        })
    }
