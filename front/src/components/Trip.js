@@ -34,8 +34,8 @@ const Trip = (props) => {
         <>
         {props.trip ?
         <div>
-            <h1>{props.trip.city}<br/>{props.trip.country}</h1>
-            <h3>{props.trip.startDate} - {props.trip.endDate}</h3>
+            <h1>City: {props.trip.city}<br/>Country: {props.trip.country}</h1>
+            <h3>Dates Traveled: {props.trip.startDate} - {props.trip.endDate}</h3>
             <h4>Description: {props.trip.description}</h4>
             <h4>Travelers: {props.trip.travelers}</h4>
             <h5>Rating: {props.trip.rating}/5</h5>
